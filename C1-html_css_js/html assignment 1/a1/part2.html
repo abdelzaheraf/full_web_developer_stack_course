@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+	
+	<head>
+		<title>A1-part2</title>
+		
+		<style>
+		
+			fieldset {
+				background: lightyellow;
+				border:10px solid yellow;
+				margin-bottom:10px;
+				width: 720px;
+			}
+			
+			label{
+				width: 180px;
+				display: inline-block;
+				text-align: right;
+				text-align: top;
+			}
+			
+			#gender, #contact{
+				width: auto;
+			}
+			
+			.beg{
+				text-align: center;
+				background-color: red;
+				color: white;
+				padding: 3px;
+				display: inline-block;
+				width: 45px;
+				vertical-align:top;
+				outline-style:solid; 
+				outline-color:red;
+			}
+			
+			.end{
+				text-align: center;
+				background-color: purple;
+				color: white;
+				padding: 3px;
+				display: inline-block;
+				width: 45px;
+				vertical-align:top;
+				outline-style:solid; 
+				outline-color:purple;
+			}
+			
+			textarea{
+				width: 360px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	
+<body>
+	
+    <h1>Please Enter Your Details For Our Dating Website!</h1>
+    
+    <form action="http://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data">
+	    <div>
+	    	<fieldset>
+	    		<legend>Your Face</legend>
+	    		
+	    		<label for="avatar">Your image:</label>
+	    		<input type="file" id="avater" name="avatar" required/> <br>
+	    		
+	    		<label for="preview">Image preview:</label>
+	    		<img id="preview" name="preview" width="15%"/>
+	    	
+	    	</fieldset>
+	    </div>
+	    
+	    <div>
+	    	<fieldset>
+	    		<legend>Your General Details</legend>
+		    		
+		    		<label for="name">Name:</label>
+		    		<input type= "text" id="name" name="name" required/><br>
+		    		
+		    		<label for="gender">Gender:</label>
+		    		<input type="radio" id="gender" name="gender" value="male" required/>Male
+		    		<input type="radio" id="gender" name="gender" value="female"/ required>Female
+		    		<br>
+		    		
+		    		<label for="age">Age:</label>
+		    		<input type="number" id="age" name="age" value="18" min="1" max="130" step="1" required/><br>
+		    		
+		    		<label for="dob">Date of birth:</label>
+		    		<input type="date" id="dob" name="dob"/><br>
+		    		
+		    		<label for="color">Favorite color:</label>
+		    		<input type="color" id="color" name="color"/><br>
+		    		
+		    		<label for="country">Which country:</label>
+		    		<select name="country" id="country">
+		    			<option value="na" selected="selected"></option>
+		    			<option value="rus">Russia</option>
+		    			<option value="ind">India</option>
+		    			<option value="grm">Germany</option>
+		    			<option value="egy">Egypt</option>
+		    			<option value="amr">America</option>
+		    		</select>
+		    		
+	    	</fieldset>
+	    </div>
+	    
+	    <div>
+	    	<fieldset>
+	    		<legend>Your Indicators</legend>
+	    		
+	    			<label for="height">Height:</label>	
+		    		<span class="beg">Short</span>
+		    		<input type="range" id="height" name="height" min="0" max="100"/>
+		    		<span class="end">Tall</span>
+		    		<br>
+		    
+		    		<label for="salary">Salary:</label>
+		    		<span class="beg">Poor</span>
+		    		<input type="range" id="salary" name="salary" min="0" max="100"/>
+		    		<span class="end">Rich</span>
+	    	
+	    	</fieldset>
+	    </div>
+	    
+	    <div>
+	    	<fieldset>
+	    		<legend>Your Contact Information</legend>
+	    		
+	    		<label for="email">Email:</label>
+	    		<input type="email" id="email" name="email" required><br>
+	    		
+	    		<label for="tele">Mobile:</label>
+	    		<input type="tel" id="tele" name="tele" /> <br>
+	    		
+	    		<label for="address">Address:</label>
+	    		<textarea id="address" name="adress"> </textarea><br>
+	    		
+	    		<label for="contact">Method to contact you:</label>
+		    	<input type="checkbox" id="contact" name="contact" value="email" />Email
+		    	<input type="checkbox" name="contact" value="whatsapp" />Whatsapp
+		    	<input type="checkbox" name="contact" value="inappchat" />In-app-chat
+	    		
+	    	</fieldset>
+	    	
+	    </div>
+	    <input type="submit" value="Submit!"/>	
+    </form>
+    
+</body>
+</html>
